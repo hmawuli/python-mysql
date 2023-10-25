@@ -14,7 +14,7 @@ students =[("job", 12),
            ("joseph", 22),
            ("vivian", 20),
            ("yayara", 19),
-           ("asha", 21),
+           ("asha", 20),
            ]
 
 mycursor.executemany(sqlFormal, students)
