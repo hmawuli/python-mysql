@@ -11,9 +11,11 @@ mydb = mysql.connector.connect(
  
 #  mycursor.execute("CREATE DATABASE test_connectiondb")
 
-mycursor.execute("SHOW DATABASES")
+# mycursor.execute("SHOW DATABASES")
 
-for dn in mycursor:
-    print(db);
+#
+mycursor.execute("CREATE TABLE students (name VARCHAR(255), age INTEGER(10),)")
 
-  
+   for db in mycursor:
+       
+   print(db)
