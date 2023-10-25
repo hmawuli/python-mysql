@@ -20,9 +20,3 @@ students =[("job", 12),
 mycursor.executemany(sqlFormal, students)
 
 mydb.commit()
-
-
-
-
-
-#
