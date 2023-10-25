@@ -9,14 +9,24 @@ mydb = mysql.connector.connect(
 
 mycursor = mydb.cursor()
 
-# Create a table called "students"
-mycursor.execute("CREATE TABLE students (name VARCHAR(255), age INT)")
+sqlFormal = "INSERT INTO students (name, age) VALUE (%s, %s)"
+students =[("job", 12),
+           ("joseph", 22),
+           ("vivian", 20),
+           ("yayara", 19),
+           ("asha", 21),
+           ]
+
+mycursor.executemany(sqlFormal, students)
+
+mydb.commit()
 
 
 
-# Execute a query to fetch data from the "students" table
-mycursor.execute("SELECT * FROM students")
 
-# Fetch and print the results
-for db in mycursor:
-    print(db)
+# # Create a table called "students"
+# mycursor.execute("CREATE TABLE students (name VARCHAR(255), age INT)")
+
+
+
+#
